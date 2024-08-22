@@ -23,3 +23,4 @@ class Student:
 
 student1 = Student('John', 18)
 print(student1.get_name())
+print(student1.get_age())
