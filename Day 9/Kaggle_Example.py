@@ -27,3 +27,20 @@ duplicate_count=df.duplicated().sum(0)
 print(duplicate_count)
 
 df.drop_duplicates(keep='first', inplace=True)
+
+#Example find average IQ for each continent
+average_iq_per_continent=df.groupby('Continent')['Average IQ'].mean()
+
+print(average_iq_per_continent)
+
+average_iq_per_continent_sorted=average_iq_per_continent.sort_values(ascending=True)
+print(average_iq_per_continent_sorted)
+
+total_Nobel_per_countries=df.groupby('Country')['Nobel Prices'].sum()
+print(total_Nobel_per_countries)
+
+count_readers_per_continent=df.groupby('Continent')['Literacy Rate'].mean()
+print(count_readers_per_continent)
+
+
+
